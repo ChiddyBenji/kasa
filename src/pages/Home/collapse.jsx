@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
+import arrowup from '../../assets/arrowup.png';
+import arrowback from '../../assets/arrowback.png';
 
-function Collapse({ title, children }) { // ici collapse prend deux propriétés (props)
-  const [isOpen, setIsOpen] = useState(false); // variable d'état isopen qui est défini sur false, setIsopen sert a mettre a jour celle-ci
-
+function Collapse({ title, children }) {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="collapse-container">
-      <button className="collapse-button" onClick={() => setIsOpen(!isOpen)}> {/* change isopen entre true et false au click */}
+      <button className="collapse-button" onClick={() => setIsOpen(!isOpen)}>
         <span>{title}</span>
-        <span>{isOpen ? '▼' : '▲'}</span> {/* si isOpen est true, sinon false */}
+        <img 
+          src={isOpen ? arrowup : arrowback} 
+          alt="Flèche"
+          className="collapse-arrow"
+        />
       </button>
 
       <div className={`collapse-content ${isOpen ? 'open' : ''}`}>

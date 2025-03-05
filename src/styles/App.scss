@@ -28,24 +28,26 @@ body {
   align-items: center;
   padding: 1rem 2rem;
   background-color: #f8f9fa;
-  border-bottom: 1px solid #e0e0e0;
   padding-left: 5em;
   padding-right: 5 em;
 
   .logo-container {
     .logo {
-      height: 50px; // Ajustez la taille du logo selon vos besoins
+      height: 50px;
+      margin-left: 2em;
     }
   }
 
   .nav-links {
     display: flex;
     gap: 2rem;
+    margin-right: 2em;
+    
 
     .nav-link {
       text-decoration: none;
       color: #333;
-      font-weight: 500;
+      font-weight: 600;
 
       &:hover {
         color: #007bff;
@@ -55,8 +57,17 @@ body {
 }
 
 @media (max-width: 480px) {
-  header {
+  .header {
     padding-left: 2em !important;
+    .logo-container {
+      .logo {
+        
+        margin-left: 0;
+      }
+    }
+    .nav-links {
+      margin-right: 0;
+    }
   }
 }
 
@@ -301,7 +312,17 @@ body {
       }
     }
   }
-
+  
+@media (max-width:480px) {
+  .content-footer {
+    .content-txt-footer {
+      width: 57%;
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
 // NotFound
 
 .content-NotFound {
@@ -378,6 +399,7 @@ body {
     width: 100%;
     justify-content: center;
     max-width: 1240px;
+    
     .info-one {
       display: flex;
       width: 50%;
@@ -402,12 +424,38 @@ body {
     .info-two {
       display: flex;
       width: 50%;
-    height: auto;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: self-end;
-    margin-left: 2em;
+      height: auto;
+      justify-content: end;
+      flex-direction: column;
+      align-items: self-end;
+      margin-left: 2em;
     }
+}
+
+.info-number {
+  max-width: 1240px;
+  display: flex;
+  gap: 2em;
+  .info-number-one {
+    width: 50%;
+    margin-top: 1em;
+  }
+  .info-number-two {
+    width: 50%;
+    margin-top: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-number {
+    display: block;
+    .info-number-one {
+      width: 100%;
+    }
+    .info-number-two {
+     width: 100%;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -431,7 +479,7 @@ body {
       width: 100%;
       margin-left: 0;
       flex-wrap:wrap ;
-      flex-direction: inherit;
+      flex-direction: row-reverse;
       justify-content: inherit;
       .host {
         width: 50%;
@@ -443,6 +491,7 @@ body {
         display: flex;
         justify-content: center;
         height: 5vh;
+        margin-bottom: 0;
       }
     }
   }
@@ -588,6 +637,7 @@ body {
 .rating {
   display: flex;
   gap: 5px;
+  margin-bottom: 2em;
 }
 
 .star {
@@ -597,6 +647,7 @@ body {
 
 .star.filled {
   color: #ff6060; /* Couleur des étoiles remplies */
+  
 }
 
 .host {
