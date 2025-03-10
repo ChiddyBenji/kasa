@@ -1,5 +1,5 @@
-import React from 'react';
-import island from '../../assets/island.png'; // Image par défaut
+import React from "react";
+import island from "../../assets/island.png"; // Image par défaut
 
 function Banner({ title, image }) {
   return (

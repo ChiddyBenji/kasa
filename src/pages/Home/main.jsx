@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Header from './Header';
-import island from '../../assets/island.png';
-import Footer from './Footer';
-import Banner from './banner';
+import React from "react";
+import { Link } from "react-router-dom";
+import Header from "./Header";
+import island from "../../assets/island.png";
+import Footer from "./Footer";
+import Banner from "./banner";
 
 function Main({ data }) {
   return (
     <div className="content-main">
       <Header />
       <Banner title="Chez vous, partout et ailleurs" image={island} />
-      
+
       <div className="content-cards">
         {data.map((card) => (
           <Link to={`/logement/${card.id}`} key={card.id} className="card-link">
